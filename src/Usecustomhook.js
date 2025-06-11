@@ -27,7 +27,7 @@ const Usecustomhook = (URL) => {
 
    useEffect(()=>{
       fetchApi(URL);
-   },[])
+   },[URL])
 
     return [userData, Loading, isError];
   

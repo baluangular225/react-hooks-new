@@ -22,6 +22,11 @@ import Title from './Callback/Title';
 import UseCustomHook1 from './Usecustomhook1';
 import Usecustomhook2 from './Usecustomhook2';
 import Usecustomhook from './Usecustomhook';
+import UsestateSample from './UsestateSample';
+import UsestateDetails from './UsestateDetails';
+import Usestatepost1 from './Usestatepost1';
+import Usecontext5 from './useContext5';
+import Datatables from './Datatables';
 
 const App = () => {
   return (
@@ -29,11 +34,15 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Usestate1 />} />
         <Route path="/usestate2" element={<Usestate2 />} />
+        <Route path='/usestatesample' element={<UsestateSample/>} />
+        <Route path="/usestatesample/:userId" element={<UsestateDetails />} />
+        <Route path='/usestatepost1' element={<Usestatepost1/> } />
         <Route path="/useeffect1" element={<Useeffect1 />} />
         <Route path="/usecontext1" element={<Usecontext1 />} />
         <Route path="/usecontext2" element={<Usecontext2 />} />
         <Route path="/usecontext3" element={<Usecontext3 />} />
         <Route path="/usecontext4" element={<Usecontext4 />} />
+        <Route path='/usecontext5' element={<Usecontext5/>} />
         <Route path="/usereducer1" element={<Usereducer1 />} />
         <Route path="/usereducer2" element={<Usereducer2 />} />
         <Route path='/usereducer3' element={<Usereducer3/>} />
@@ -45,6 +54,7 @@ const App = () => {
         <Route path='/usecustomhook1' element={<UseCustomHook1/>} />
         <Route path='/usecustomhook2' element={<Usecustomhook2/>} />
         <Route path='/usecustomhook' element={<Usecustomhook/>} />
+        <Route path="/datatables" element={<Datatables/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>

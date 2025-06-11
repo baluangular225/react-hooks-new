@@ -1,6 +1,28 @@
 {
   "users": [
-    { "id": 1, "name": "Alice" },
-    { "id": 2, "name": "Bob" }
+    {
+      "id": "1",
+      "name": "Alice",
+      "password": 12345,
+      "email": "j5D0D@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "password": 22222,
+      "email": "Yd3tZ@example.com"
+    },
+    {
+      "id": "d518",
+      "name": "balu balla",
+      "email": "baluballa225@gmail.com",
+      "password": "balu@123"
+    },
+    {
+      "id": "39de",
+      "name": "React World",
+      "email": "reactworld@google.com",
+      "password": "react@12345"
+    }
   ]
 }

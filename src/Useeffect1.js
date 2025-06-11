@@ -24,12 +24,15 @@ const Useeffect1 = () => {
     }
     setLoading(false);
     setIsError({status: false, msg: ""});
+    if(response.status === 404){
+        throw new Error('Please enter a valid URL API 404');
+    }
 
   } catch (error) {
     console.log("Fetch error:", error);
     setDrinksData([]); // fallback on error too
     setLoading(false);
-    setIsError({status: true, msg: 'Something went wrong'});
+    setIsError({status: true, msg: error.message || 'Something went wrong'});
   }
 };
 
