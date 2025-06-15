@@ -27,6 +27,9 @@ import UsestateDetails from './UsestateDetails';
 import Usestatepost1 from './Usestatepost1';
 import Usecontext5 from './useContext5';
 import Datatables from './Datatables';
+import UsestateSample1 from './UsestateSample1';
+import UsestateDetails1 from './UsestateDetails1';
+import Usestatepost2 from './Usestatepost2';
 
 const App = () => {
   return (
@@ -37,6 +40,9 @@ const App = () => {
         <Route path='/usestatesample' element={<UsestateSample/>} />
         <Route path="/usestatesample/:userId" element={<UsestateDetails />} />
         <Route path='/usestatepost1' element={<Usestatepost1/> } />
+        <Route path='/usestatesample1' element={<UsestateSample1/>} />
+        <Route path='/usestatesample1/:userId' element={<UsestateDetails1/>} />
+        <Route path='/usestatepost2' element={<Usestatepost2/>} />
         <Route path="/useeffect1" element={<Useeffect1 />} />
         <Route path="/usecontext1" element={<Usecontext1 />} />
         <Route path="/usecontext2" element={<Usecontext2 />} />
