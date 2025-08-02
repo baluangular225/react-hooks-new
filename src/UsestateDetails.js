@@ -4,7 +4,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 
 const UsestateDetails = () => {
-  const [myDetails, setMyDetails] = useState(null); // use null instead of []
+  const [myDetails, setMyDetails] = useState([]); // use null instead of []
   const { userId } = useParams();
   const navigation = useNavigate();
 

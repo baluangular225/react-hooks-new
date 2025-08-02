@@ -30,6 +30,11 @@ import Datatables from './Datatables';
 import UsestateSample1 from './UsestateSample1';
 import UsestateDetails1 from './UsestateDetails1';
 import Usestatepost2 from './Usestatepost2';
+import UseContext6 from './UseContext6';
+import Products from './Products';
+import Cart from './Cart';
+import Payment from './Payment';
+import SuccessPayment from './SuccessPayment';
 
 const App = () => {
   return (
@@ -49,9 +54,14 @@ const App = () => {
         <Route path="/usecontext3" element={<Usecontext3 />} />
         <Route path="/usecontext4" element={<Usecontext4 />} />
         <Route path='/usecontext5' element={<Usecontext5/>} />
+        <Route path='/usecontext6' element={<UseContext6/>} />
         <Route path="/usereducer1" element={<Usereducer1 />} />
         <Route path="/usereducer2" element={<Usereducer2 />} />
         <Route path='/usereducer3' element={<Usereducer3/>} />
+        <Route path="/products" element={<Products/>} />
+        <Route path='/cart' element={<Cart/>} />
+        <Route path='/payment' element={<Payment/>} />
+        <Route path='/successpayment' element={<SuccessPayment/>} />
         <Route path="/useref1" element={<Useref1 />} />
         <Route path="/useref2" element={<Useref2 />} />
         <Route path="/usememo1" element={<Usememo1 />} />
