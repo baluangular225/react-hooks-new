@@ -43,12 +43,7 @@ const dataSlice = createSlice({
     error: null,
   },
   reducers: {
-    DELETE_USER: (state, action) => {
-      state.users = state.users.filter(user => user.id !== action.payload);
-    },
-    DELETE_POST:(state, action)=>{
-        state.posts = state.posts.filter(post => post.id !== action.payload);
-    }
+   ncThunk
     
   },
   extraReducers: (builder) => {
