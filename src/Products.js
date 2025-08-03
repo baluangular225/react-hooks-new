@@ -38,7 +38,7 @@ const Products = () =>{
                         {products.map((eachProduct) => {
                         const { id, title, images, description,price } = eachProduct;
                         return (
-                            <div className="col-12 col-md-4" key={id}>
+                            <div className="col-12 col-md-3" key={id}>
                             <div className="card h-100 shadow text-center"> {/* h-100 ensures equal height */}
                                 <img
                                 src={images}

@@ -1,0 +1,38 @@
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Common button styles */
+.tab-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent; /* Default border */
+  background-color: transparent; /* Transparent background for inactive tab */
+  color: #12abdb; /* Default color */
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Inactive button with border */
+.tab-button:not(.active) {
+  border: 2px solid #12abdb; /* Border for inactive tab */
+  color: #12abdb; /* Border color matches text color */
+   border-radius: 15px;
+}
+
+/* Active button styles */
+.tab-button.active {
+  background-color: #12abdb; /* Active background color */
+  color: white; /* White text color when active */
+  border: 2px solid #12abdb; /* Border matches background */
+  border-radius: 15px;
+}
+
+.tab-button:hover {
+  background-color: #f0f9ff; /* Light background on hover for any button */
+  color: #12abdb; /* Text color change on hover */
+}

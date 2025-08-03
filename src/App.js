@@ -35,6 +35,9 @@ import Products from './Products';
 import Cart from './Cart';
 import Payment from './Payment';
 import SuccessPayment from './SuccessPayment';
+import DataUsersRedux from './DataUsersRedux';
+import DataUsers1 from './DataUsers1';
+import DataUsers2 from './DataUsers2';
 
 const App = () => {
   return (
@@ -62,6 +65,10 @@ const App = () => {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/payment' element={<Payment/>} />
         <Route path='/successpayment' element={<SuccessPayment/>} />
+        <Route path='/datausersredux' element={<DataUsersRedux/>} >
+          <Route index element={<DataUsers1/>} />
+          <Route path='datausers2' element={<DataUsers2/>} />
+        </Route>
         <Route path="/useref1" element={<Useref1 />} />
         <Route path="/useref2" element={<Useref2 />} />
         <Route path="/usememo1" element={<Usememo1 />} />
