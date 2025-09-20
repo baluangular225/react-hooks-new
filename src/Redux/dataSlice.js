@@ -42,10 +42,10 @@ const dataSlice = createSlice({
     loading: false,
     error: null,
   },
-  reducers: {
-   ncThunk
+  // reducers: {
+  //  ncThunk
     
-  },
+  // }
   extraReducers: (builder) => {
     builder
       // Posts

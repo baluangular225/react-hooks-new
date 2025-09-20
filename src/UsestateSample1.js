@@ -70,7 +70,7 @@ const UsestateSample1 = () => {
             body: JSON.stringify({id, name, email, website, address:{city}})
         })
         .then(response=>{
-            if(response.ok){
+            if(!response.ok){
                 throw new Error('User Data Edited Successfully');
             }
         })
@@ -161,9 +161,9 @@ const UsestateSample1 = () => {
                                     <p>{email}</p>
                                     <p>{website}</p>
                                     <p>{city}</p>
-                                    <div class="d-grid gap-0 d-md-flex justify-content-md-end">
-                                       <button class="btn btn-danger rounded-0" onClick={()=> handleDelete(id)}>Delete</button>
-                                       <button class="btn btn-primary rounded-0" onClick={()=> handleEdit(id, name, email, website, city)}>Edit</button>
+                                    <div className="d-grid gap-0 d-md-flex justify-content-md-end">
+                                       <button className="btn btn-danger rounded-0" onClick={()=> handleDelete(id)}>Delete</button>
+                                       <button className="btn btn-primary rounded-0" onClick={()=> handleEdit(id, name, email, website, city)}>Edit</button>
                                        <NavLink className="btn btn-warning rounded-0" to={`/usestatesample1/${id}`}>Details</NavLink>
                                        <button className='btn btn-success rounded-0' onClick={()=> navigate(`/usestatepost2`)}>Post</button>
                                     </div>

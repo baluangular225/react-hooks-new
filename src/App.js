@@ -38,6 +38,8 @@ import SuccessPayment from './SuccessPayment';
 import DataUsersRedux from './DataUsersRedux';
 import DataUsers1 from './DataUsers1';
 import DataUsers2 from './DataUsers2';
+import UsestateExp1 from './UsestateExp1';
+import Usestate3 from './Usestate3';
 
 const App = () => {
   return (
@@ -45,6 +47,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Usestate1 />} />
         <Route path="/usestate2" element={<Usestate2 />} />
+        <Route path='/usestate3' element={<Usestate3/>} />
         <Route path='/usestatesample' element={<UsestateSample/>} />
         <Route path="/usestatesample/:userId" element={<UsestateDetails />} />
         <Route path='/usestatepost1' element={<Usestatepost1/> } />
@@ -78,6 +81,7 @@ const App = () => {
         <Route path='/usecustomhook2' element={<Usecustomhook2/>} />
         <Route path='/usecustomhook' element={<Usecustomhook/>} />
         <Route path="/datatables" element={<Datatables/>} />
+        <Route path='/usestateexp1' element={<UsestateExp1/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>

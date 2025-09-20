@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer className="footer">
         <div className="container">
-          <span className="text-muted">© 2021 Company, Inc</span>
+          <span className="text-muted">© 2025 Company, Inc</span>
 
           <ul className="nav justify-content-end list-unstyled d-flex">
             <li className="ms-3">

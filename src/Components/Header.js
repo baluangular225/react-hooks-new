@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
   const updateValue = useSelector((state) => state.counter.value);
-  const addValue = useSelector((state) => state.user?.value);  // Adding optional chaining to prevent errors
+  const addValue = useSelector((state) => state.user.value);  // Adding optional chaining to prevent errors
   const cartValue = useSelector((state)=> state.cart)
 
   return (
