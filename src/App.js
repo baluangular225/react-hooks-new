@@ -40,6 +40,8 @@ import DataUsers1 from './DataUsers1';
 import DataUsers2 from './DataUsers2';
 import UsestateExp1 from './UsestateExp1';
 import Usestate3 from './Usestate3';
+import Usedetails3 from './Usedetails3';
+import Usepost3 from './Usepost3';
 
 const App = () => {
   return (
@@ -48,6 +50,8 @@ const App = () => {
         <Route path="/" element={<Usestate1 />} />
         <Route path="/usestate2" element={<Usestate2 />} />
         <Route path='/usestate3' element={<Usestate3/>} />
+        <Route path='/usestate3/:userId' element={<Usedetails3/>} />
+        <Route path='/usepost3' element={<Usepost3/>} />
         <Route path='/usestatesample' element={<UsestateSample/>} />
         <Route path="/usestatesample/:userId" element={<UsestateDetails />} />
         <Route path='/usestatepost1' element={<Usestatepost1/> } />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./Components/Footer";
+import { Link, NavLink } from "react-router-dom";
 
 const Usestate3 = () => {
     const [showModal, setShowModal] = useState(false);
@@ -150,6 +151,7 @@ const Usestate3 = () => {
                             <div className="modal-footer">
                                 <button className="btn btn-primary" onClick={() => Updateroducts()}>Update Product</button>
                                 <button className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -173,8 +175,10 @@ const Usestate3 = () => {
                                     }}>{description}</p>
                                     <p className="text-center">{price}</p>
                                     <div className="d-grid d-md-flex justify-content-md-end mt-auto">
-                                        <button className="btn btn-danger rounded-0 me-2" onClick={() => handleDelete(id)}>Delete</button>
+                                        <button className="btn btn-danger rounded-0" onClick={() => handleDelete(id)}>Delete</button>
                                         <button className="btn btn-primary rounded-0" onClick={() => handleEdit(id, title, description, images, price)}>Edit</button>
+                                        <NavLink className="btn btn-info rounded-0" to={`/Usestate3/${id}`}>View Details</NavLink>
+                                        <Link className="btn btn-warning rounded-0" to={`/usepost3`}>Add Post</Link>
                                     </div>
                                 </div>
                             </div>
