@@ -69,10 +69,11 @@ const Usestate3 = () => {
 
     const Updateroducts = async () => {
     // Use the image URL directly from input
+    // Find the product to get its categoryId
     const updatedProduct = {
         title,
         description,
-        price,
+        price: Number(price),
         images: [images]
     };
 

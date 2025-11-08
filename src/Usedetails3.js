@@ -36,7 +36,7 @@ const Usedetails3 = () =>{
                             <div className="shadow p-3 mb-2">
                                 <p><b>Title:</b> {myData.title}</p>
                                 <p><b>Description:</b> {myData.description}</p>
-                                <img src={myData.images} alt={myData.title} className="img-fluid" />
+                                <img src={myData.images} alt={myData.title} width={300} className="img-fluid" />
                                 <p><b>Category</b> {myData.category?.creationAt}</p>
                                 <p><b>Price</b> ${myData.price}</p>
                             </div>

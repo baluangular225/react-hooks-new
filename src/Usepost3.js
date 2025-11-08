@@ -14,7 +14,6 @@ const Usepost3 = () =>{
           title,
           price: Number(price),
           description,
-          categoryId: 1, // required by API, you can make this dynamic
           images: [images]
       };
 
