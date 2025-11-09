@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -65,7 +65,7 @@ const Usestate6 = () =>{
                 new URL(maybeUrl);
             } catch (e) {
                 // Accept domain-like strings such as 'example.com' or 'www.example.com' optionally with a path
-                const domainRegex = /^[a-z0-9\-\.]+\.[a-z]{2,}(\/.*)?$/i;
+                const domainRegex = /^[a-z0-9.-]+\.[a-z]{2,}(\/.*)?$/i;
                 if (!domainRegex.test(websiteVal)) {
                     newErrors.website = 'Website URL is invalid';
                 }
@@ -282,6 +282,7 @@ const Usestate6 = () =>{
                                    <button class="btn btn-primary rounded-0" onClick={()=> handleEdit(id, name, email, phone, website)}>Edit</button>
                                    {/* Use Link with `to` prop instead of calling navigate in onClick */}
                                    <button className="btn btn-warning rounded-0" onClick={handlePost}>Post</button>
+                                   <NavLink className="btn btn-success rounded-0" to={`/usestate6/${id}`}>Details</NavLink>
                                 </div>
                             </div>
                         </div>

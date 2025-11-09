@@ -46,6 +46,8 @@ import Usestate4 from './Usestate4';
 import Usestate5 from './Usestate5';
 import Usestate6 from './Usestate6';
 import Usepost6 from './Usepost6';
+import UseDetails6 from './UseDetails6';
+import Userchart from './Charts/Userchart';
 
 const App = () => {
   return (
@@ -60,6 +62,8 @@ const App = () => {
         <Route path='/usestate5' element={<Usestate5/>} />
         <Route path='/usestate6' element={<Usestate6/>} />
         <Route path="/usepost6" element={<Usepost6/>} />
+        <Route path='/usestate6/:userId' element={<UseDetails6 />} />
+        <Route path='/userchart' element={<Userchart/>} />
         <Route path='/usestatesample' element={<UsestateSample/>} />
         <Route path="/usestatesample/:userId" element={<UsestateDetails />} />
         <Route path='/usestatepost1' element={<Usestatepost1/> } />
