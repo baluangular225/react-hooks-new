@@ -14,6 +14,7 @@ const Usestate5 = () =>{
  const [website, setWebsite] = useState('');
  const [email, setEmail] = useState('');
  const [phone, setPhone] = useState('');
+ const [validate, setValidate] = useState(false);
 
 
  const fetchApi = async (apiUrl) =>{
@@ -61,6 +62,7 @@ const Usestate5 = () =>{
     setEmail(email);
     setPhone(phone);
     setWebsite(website);
+    setValidate(true);
 
     await fetch(`https://jsonplaceholder.typicode.com/users/${id}`,{
         method:'PUT',
@@ -114,6 +116,7 @@ const Usestate5 = () =>{
         setEmail('');
         setPhone('');
         setWebsite('');
+        setValidate(false);
     } catch (error) {
         console.log(error);
     }
@@ -137,6 +140,7 @@ const Usestate5 = () =>{
                <div className="container">
                    <h4 className="mt-4 mb-4" style={{color:'#0070ad'}}>Usestate5 Component</h4>
 
+                   {validate && (
                    <div className="mb-3 mt-3 shadow p-3">
                         <input type="text" className="form-control mb-2" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
                         <input type="text" className="form-control mb-2" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Website" />
@@ -144,6 +148,7 @@ const Usestate5 = () =>{
                         <input type="text" className="form-control mb-2" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone" />
                         <button type="submit" className="btn btn-primary" onClick={() => updateData(editId)}>Update User</button>
                    </div>
+                   )}
 
                     <div className="row">
                         {myData.map((eachData)=>{
