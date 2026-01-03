@@ -50,6 +50,8 @@ import UseDetails6 from './UseDetails6';
 import Userchart from './Charts/Userchart';
 import Mailjs from './Mailjs';
 import EmailRestAPI from './EmailRestAPI';
+import Usestate7 from './Usestate7';
+import UseDetails7 from './UseDetails7';
 
 const App = () => {
   return (
@@ -65,6 +67,8 @@ const App = () => {
         <Route path='/usestate6' element={<Usestate6/>} />
         <Route path="/usepost6" element={<Usepost6/>} />
         <Route path='/usestate6/:userId' element={<UseDetails6 />} />
+        <Route path='/usestate7' element={<Usestate7/>} />
+        <Route path='/usestate7/:userId' element={<UseDetails7 />} />
         <Route path='/mail' element={<Mailjs />} />
         <Route path='/emailrestapi' element={<EmailRestAPI />} />
         <Route path='/userchart' element={<Userchart/>} />
