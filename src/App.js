@@ -52,6 +52,10 @@ import Mailjs from './Mailjs';
 import EmailRestAPI from './EmailRestAPI';
 import Usestate7 from './Usestate7';
 import UseDetails7 from './UseDetails7';
+import Props1 from './Props/Props1';
+import Props2 from './Props/Props2';
+import Events1 from './Events/Events1';
+import Importexport from './Importexpot/Importexport';
 
 const App = () => {
   return (
@@ -106,6 +110,10 @@ const App = () => {
         <Route path='/usecustomhook' element={<Usecustomhook/>} />
         <Route path="/datatables" element={<Datatables/>} />
         <Route path='/usestateexp1' element={<UsestateExp1/>} />
+        <Route path='props1' element={<Props1/>} />
+        <Route path='props2' element={<Props2/>} />
+        <Route path='events1' element={<Events1/>} />
+        <Route path='importexport' element={<Importexport/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>
