@@ -56,6 +56,10 @@ import Props1 from './Props/Props1';
 import Props2 from './Props/Props2';
 import Events1 from './Events/Events1';
 import Importexport from './Importexpot/Importexport';
+import Usestatepratice1 from './Hookspratice/Usestatepratice1';
+import Usestatepratice2 from './Hookspratice/Usestatepratice2';
+import Usestatepratice3 from './Hookspratice/Usestatepratice3';
+import Usestatepratice4 from './Hookspratice/Usestatepratice4';
 
 const App = () => {
   return (
@@ -114,6 +118,10 @@ const App = () => {
         <Route path='props2' element={<Props2/>} />
         <Route path='events1' element={<Events1/>} />
         <Route path='importexport' element={<Importexport/>} />
+        <Route path='usestatepratice1' element={<Usestatepratice1/>} />
+        <Route path='usestatepratice2' element={<Usestatepratice2 />} />
+        <Route path='usestatepratice3' element={<Usestatepratice3/>} />
+        <Route path='usestatepratice4' element={<Usestatepratice4/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>
