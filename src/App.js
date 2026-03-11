@@ -61,7 +61,9 @@ import Usestatepratice2 from './Hookspratice/Usestatepratice2';
 import Usestatepratice3 from './Hookspratice/Usestatepratice3';
 import Usestatepratice4 from './Hookspratice/Usestatepratice4';
 import Usestatepratice5 from './Hookspratice/Usestatepratice5';
-import Useeffect11 from './Hookspratice/Useeffect1';
+import Useeffect11 from './Hookspratice/Useeffect11';
+import Useeffect12 from './Hookspratice/Useeffect12';
+import Useeffect13 from './Hookspratice/Useeffect13';
 
 const App = () => {
   return (
@@ -126,6 +128,8 @@ const App = () => {
         <Route path='usestatepratice4' element={<Usestatepratice4/>} />
         <Route path='usestatepratice5' element={<Usestatepratice5/>} />
         <Route path="useeffect11" element={<Useeffect11/>} />
+        <Route path='useeffect12' element={<Useeffect12/>} />
+        <Route path='useeffect13' element={<Useeffect13/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>
