@@ -11,12 +11,14 @@ import { UserContextProvider1 } from './Usecontext/userContext1';
 import { UserContextProvider2 } from './Usecontext/userContext2';
 import { UserContextProvider4 } from './Usecontext/userContext3';
 import { UserContextProvider5 } from './Usecontext/userContext4';
+import { UsercontextProvider6 } from './Hookspratice/Usercontext';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <React.StrictMode>
+  <UsercontextProvider6>
   <UserContextProvider5>
    <UserContextProvider4>
     <UserContextProvider2>
@@ -30,6 +32,7 @@ root.render(
       </UserContextProvider2>
       </UserContextProvider4>
       </UserContextProvider5>
+      </UsercontextProvider6 >
    </React.StrictMode> 
 );
 

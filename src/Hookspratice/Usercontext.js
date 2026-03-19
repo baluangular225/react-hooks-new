@@ -1,0 +1,28 @@
+import { createContext, useEffect, useState } from 'react'
+
+export const Usercontext = createContext()
+
+export const UsercontextProvider6 = ({ children }) =>{
+
+  const [userData, setUserData] = useState([]);
+
+  const fetchApi = async (apiUrl) =>{
+     try {
+       const response = await fetch(apiUrl);
+       const data = await response.json();
+       setUserData(data);
+     } catch (error) {
+       console.log("Error fetching data:", error);
+     }
+  }
+
+  useEffect(()=>{
+    fetchApi('https://jsonplaceholder.typicode.com/users');
+  },[])
+
+    return (
+        <Usercontext.Provider value={userData}>
+          {children}
+        </Usercontext.Provider>
+    )
+}
