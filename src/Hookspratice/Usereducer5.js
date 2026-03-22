@@ -38,7 +38,12 @@ const reducer = (state, action) =>{
     if(action.type === "USER_UPDATE"){
         const updateUserData = state.userData.map((eachUser)=>{
             if(eachUser.id === action.payload.id){
-                return {...eachUser, name: action.payload.name, email: action.payload.email, website: action.payload.website}
+                return {
+                    ...eachUser,
+                     name: action.payload.name,
+                     email: action.payload.email,
+                    website: action.payload.website
+                }
             }else{
                 return eachUser;
             }

@@ -69,6 +69,8 @@ import {Usercontext} from './Hookspratice/Usercontext';
 import Usercontextnew from './Hookspratice/Usercontextnew';
 import Usereducer4 from './Hookspratice/Usereducer4';
 import Usereducer5 from './Hookspratice/Usereducer5';
+import Useref11 from './Hookspratice/Useref11';
+import Useref12 from './Hookspratice/Useref12';
 
 const App = () => {
   return (
@@ -140,6 +142,8 @@ const App = () => {
         <Route path='usercontextnew' element={<Usercontextnew/>} />
         <Route path='usereducer4' element={<Usereducer4/>} />
         <Route path='usereducer5' element={<Usereducer5/>} />
+        <Route path='useref11' element={<Useref11/>} />
+        <Route path='useref12' element={<Useref12/>} />
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>
