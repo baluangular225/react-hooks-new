@@ -1,12 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
+import CartStatus from './CartStatus';
 
 const Header = () => {
 
   const updateValue = useSelector((state) => state.counter.value);
   const addValue = useSelector((state) => state.user.value);  // Adding optional chaining to prevent errors
-  const cartValue = useSelector((state)=> state.cart)
+  const cartValue = useSelector((state)=> state.cart);
+  const productValue = useSelector((state) => state.productReducer?.productsData || []); // select products array
+  const totalPrice = useSelector((state) => state.productReducer?.totalPrice || 0); // select total price
 
   return (
     <div>
@@ -47,12 +50,26 @@ const Header = () => {
                   <i className="bi bi-cart3 me-1"></i>{cartValue.length}
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/products">
+                  Product List {productValue.length}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  to="/cart"
+                  style={{ border: '1px dashed #12abdb', padding: '4px 8px', borderRadius: '4px' }}
+                >
+                  Total Price: {totalPrice}
+                </Link>
+              </li>
 
-             
             </ul>
           </div>
         </div>
       </nav>
+      <CartStatus mountId="Header" />
     </div>
   );
 };

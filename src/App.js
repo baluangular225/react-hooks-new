@@ -71,6 +71,11 @@ import Usereducer4 from './Hookspratice/Usereducer4';
 import Usereducer5 from './Hookspratice/Usereducer5';
 import Useref11 from './Hookspratice/Useref11';
 import Useref12 from './Hookspratice/Useref12';
+import Backgrounds from './Hookspratice/Backgrounds';
+import Mobileproducts from './Hookspratice/Mobileproducts';
+import CartStatus from './Components/CartStatus';
+import Usestatepratice6 from './Hookspratice/Usestatepratice6';
+
 
 const App = () => {
   return (
@@ -134,6 +139,7 @@ const App = () => {
         <Route path='usestatepratice3' element={<Usestatepratice3/>} />
         <Route path='usestatepratice4' element={<Usestatepratice4/>} />
         <Route path='usestatepratice5' element={<Usestatepratice5/>} />
+        <Route path='usestatepratice6' element={<Usestatepratice6 />} />
         <Route path="useeffect11" element={<Useeffect11/>} />
         <Route path='useeffect12' element={<Useeffect12/>} />
         <Route path='useeffect13' element={<Useeffect13/>} />
@@ -144,6 +150,9 @@ const App = () => {
         <Route path='usereducer5' element={<Usereducer5/>} />
         <Route path='useref11' element={<Useref11/>} />
         <Route path='useref12' element={<Useref12/>} />
+        <Route path="backgrounds" element={<Backgrounds />} />
+        <Route path='mobileproducts' element={<Mobileproducts />} />
+        
         <Route path="*" element={<Progress />} /> {/* Catch-all for unmatched routes */}
       </Routes>
     </Router>

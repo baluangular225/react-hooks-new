@@ -17,10 +17,13 @@ const Useeffect12 = () => {
         setUserData(data);
         setLoading(false);
         setError({status:false, msg:''});
+        if(response.status === 404){
+            setError({status:true, msg:'User not found'});
+        }
     } catch (error) {
         console.error('Error fetching user data:', error);
         setLoading(false);
-        setError({status:true, msg:'Failed to fetch user data'});
+        setError({status:true, msg:error.message || 'Failed to fetch user data'});
     }
  }
 

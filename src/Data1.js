@@ -256,3 +256,48 @@ export const Data2 =[
     }
   }
 ]
+
+export const MobileData = [
+    {
+        "id": 1,
+        "name": "Redmi Note 15 Pro+ 5G",
+        "brand": "Xiaomi",
+        "price": 37999,
+        "url": "https://i03.appmifile.com/665_item_in/27/01/2026/2e82f70b1cd0d35cdfd2332ef540ecee.png?thumb=1&w=1000&f=webp&q=85"
+    },
+    {
+        "id": 2,
+        "name": "Redmi Note 15 Pro 5G",
+        "brand": "Xiaomi",
+        "price": 29999,
+        "url": "https://i03.appmifile.com/112_item_in/27/01/2026/4bf726fcdff0279a45b20c0f25ba558b.png?thumb=1&w=1000&f=webp&q=85"
+    },
+    {
+        "id": 3,
+        "name": "Redmi Note 15 5G",
+        "brand": "Xiaomi",
+        "price": 24999,
+        "url": "https://i03.appmifile.com/287_item_in/31/12/2025/e926857768d71eba61dbaf0337a5992a.png?thumb=1&w=1000&f=webp&q=85"
+    },
+    {
+        "id": 4,
+        "name": "Redmi 15A 5G",
+        "brand": "Xiaomi",
+        "price": 12999,
+        "url": "https://i03.appmifile.com/562_item_in/26/03/2026/2ffc2f516503640c13c1d1eaaf21972a.png?thumb=1&w=1000&f=webp&q=85"
+    },
+    {
+        "id": 5,
+        "name": "Redmi 15 5G",
+        "brand": "Xiaomi",
+        "price": 18499,
+        "url": "https://i03.appmifile.com/790_item_in/14/08/2025/aa02cd2515ed88d2589d303e83521063.png?thumb=1&w=1000&f=webp&q=85"
+    },
+    {
+        "id": 6,
+        "name": "Redmi A5",
+        "brand": "Xiaomi",
+        "price": 7499,
+        "url": "https://i03.appmifile.com/154_item_in/11/04/2025/50f7e9d6090496422a43f1c5647f2e9c.png?thumb=1&w=1000&f=webp&q=85"
+    }
+]
