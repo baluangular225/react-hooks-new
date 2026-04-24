@@ -75,6 +75,8 @@ import Backgrounds from './Hookspratice/Backgrounds';
 import Mobileproducts from './Hookspratice/Mobileproducts';
 import CartStatus from './Components/CartStatus';
 import Usestatepratice6 from './Hookspratice/Usestatepratice6';
+import Usestatepratice7 from './Hookspratice/Usestatepratice7';
+import Usestatepratice77 from './Hookspratice/Usestatepratice77';
 
 
 const App = () => {
@@ -140,6 +142,8 @@ const App = () => {
         <Route path='usestatepratice4' element={<Usestatepratice4/>} />
         <Route path='usestatepratice5' element={<Usestatepratice5/>} />
         <Route path='usestatepratice6' element={<Usestatepratice6 />} />
+        <Route path="usestatepratice7" element={<Usestatepratice7 />} />
+        <Route path="Usestatepratice7/:userId" element={<Usestatepratice77 />} />
         <Route path="useeffect11" element={<Useeffect11/>} />
         <Route path='useeffect12' element={<Useeffect12/>} />
         <Route path='useeffect13' element={<Useeffect13/>} />

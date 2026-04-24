@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
-import { add } from "../Redux/cartSlice";
 
 const Usestatepratice6 = () =>{
 
