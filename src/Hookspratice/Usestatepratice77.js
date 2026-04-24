@@ -6,7 +6,7 @@ const Usestatepratice77 = () =>{
 
     const {userId} = useParams();
 
-    const [empData, setEmpData] = useState([]);
+    const [empData, setEmpData] = useState(null);
 
     const navigation = useNavigate();
 
@@ -27,11 +27,11 @@ const Usestatepratice77 = () =>{
     return(
         <div>
             <div className="container">
-                <h5 className="mt-3 mb-3">Usestatepratice77 Component</h5>4
+                <h5 className="mt-3 mb-3">Usestatepratice77 Component</h5>
 
                 <div className="row shadow p-3 mt-4 mb-4">
 
-                    <div className="col-7 col-xs-12">
+                    <div className="col-4 col-xs-12">
                         { empData ? (
                         <div className="col-12 col-xs-12">
                             <div className="">
@@ -48,8 +48,8 @@ const Usestatepratice77 = () =>{
                         <p className="text-center mt-5" style={{color:'#12abdb'}}>Loading userData....</p>
                     )}
                     </div>
-                    <div className="col-5 col-xs-12">
-                        <Userchart />
+                    <div className="col-8 col-xs-12">
+                        <Userchart user={empData} />
                     </div>
 
                 <button className="btn btn-primary rounded-0" onClick={() => navigation('/Usestatepratice7')}>Go Back</button>

@@ -37,12 +37,15 @@ export default function Userchart({ user: propUser }) {
       fetchUser();
     }
   }, [propUser, userId]);
-  // Fields we want to display
+  // Fields we want to display (expanded to show full user details)
   const fields = useMemo(() => [
     { key: 'name', label: 'Name' },
+    { key: 'username', label: 'Username' },
+    { key: 'email', label: 'Email' },
+    { key: 'phone', label: 'Phone' },
     { key: 'website', label: 'Website' },
+    { key: 'company', label: 'Company' },
     { key: 'address', label: 'Address' },
-    { key: 'city', label: 'City' },
   ], []);
 
   // Build chart data from the provided `user` prop for a PolarArea chart.
@@ -53,19 +56,21 @@ export default function Userchart({ user: propUser }) {
     const values = fields.map(f => {
       let val = '';
       if (f.key === 'address') {
-        val = user.address ? `${user.address.street || ''} ${user.address.suite || ''}`.trim() : '';
-      } else if (f.key === 'city') {
-        val = user.address ? (user.address.city || '') : '';
+        if (user.address) {
+          const { street = '', suite = '', city = '', zipcode = '' } = user.address;
+          val = `${street}${street ? ', ' : ''}${suite}${suite ? ', ' : ''}${city}${city ? ', ' : ''}${zipcode}`.trim();
+        }
+      } else if (f.key === 'company') {
+        val = user.company?.name || '';
       } else {
         val = user[f.key] || '';
       }
       const len = String(val).length;
-      // scale to 0-100 range, ensure minimum for visibility
-      const scaled = Math.min(100, Math.max(5, Math.round(len * 4)));
+      const scaled = Math.min(100, Math.max(5, Math.round(len * 3)));
       return { raw: val, scaled };
     });
 
-    const colors = ['#1E90FF', '#3CCFDF', '#F6C85F', '#FF6B6B'];
+    const colors = ['#1E90FF', '#3CCFDF', '#F6C85F', '#FF6B6B', '#8E44AD', '#2ECC71', '#E67E22'];
 
     return {
       labels: fields.map(f => f.label),
@@ -93,7 +98,8 @@ export default function Userchart({ user: propUser }) {
         animateScale: true,
       },
       plugins: {
-        legend: { display: true, position: 'right', labels: { boxWidth: 12, padding: 12 } },
+        // hide the built-in legend (it creates a vertical stacked list)
+        legend: { display: false },
         tooltip: {
           enabled: true,
           callbacks: {
@@ -123,8 +129,22 @@ export default function Userchart({ user: propUser }) {
 
   return (
     <div style={{ width: '100%', minHeight: 300 }} className="d-flex align-items-center justify-content-center">
-      <div style={{ width: '100%', maxWidth: 560, height: 320 }}>
-        <PolarArea data={chartData} options={options} />
+      <div style={{ display: 'flex', gap: 16, alignItems: 'stretch', width: '100%', maxWidth: 900 }}>
+        <div style={{ flex: '0 0 560px', height: 320 }}>
+          <PolarArea data={chartData} options={options} />
+        </div>
+        <div style={{ flex: '1 1 320px', padding: 12, border: '1px solid #eee', borderRadius: 6, background: '#fff', height: 320 }}>
+          <h6 style={{ marginTop: 0, marginBottom: 8 }}>User Details</h6>
+          <ul style={{ paddingLeft: 16, margin: 0 }}>
+            <li style={{ marginBottom: 8 }}><strong>Name:</strong> {user.name}</li>
+            <li style={{ marginBottom: 8 }}><strong>Username:</strong> {user.username}</li>
+            <li style={{ marginBottom: 8 }}><strong>Email:</strong> {user.email}</li>
+            <li style={{ marginBottom: 8 }}><strong>Phone:</strong> {user.phone}</li>
+            <li style={{ marginBottom: 8 }}><strong>Website:</strong> {user.website}</li>
+            <li style={{ marginBottom: 8 }}><strong>Company:</strong> {user.company?.name}</li>
+            <li style={{ marginBottom: 8 }}><strong>Address:</strong> {user.address ? `${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}` : ''}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
