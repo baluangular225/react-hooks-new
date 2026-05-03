@@ -77,6 +77,8 @@ import CartStatus from './Components/CartStatus';
 import Usestatepratice6 from './Hookspratice/Usestatepratice6';
 import Usestatepratice7 from './Hookspratice/Usestatepratice7';
 import Usestatepratice77 from './Hookspratice/Usestatepratice77';
+import Usestatepratice8 from './Hookspratice/Usestatepratice8';
+import Usestatepratice88 from './Hookspratice/Usestatepratice88';
 
 
 const App = () => {
@@ -144,6 +146,8 @@ const App = () => {
         <Route path='usestatepratice6' element={<Usestatepratice6 />} />
         <Route path="usestatepratice7" element={<Usestatepratice7 />} />
         <Route path="Usestatepratice7/:userId" element={<Usestatepratice77 />} />
+        <Route path='usestatepratice8' element={<Usestatepratice8/>} />
+        <Route path='Usestatepratice8/:userId' element={<Usestatepratice88/>} />
         <Route path="useeffect11" element={<Useeffect11/>} />
         <Route path='useeffect12' element={<Useeffect12/>} />
         <Route path='useeffect13' element={<Useeffect13/>} />
