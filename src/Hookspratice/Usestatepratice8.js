@@ -53,6 +53,7 @@ const Usestatepratice8 = () =>{
             console.log(error);
         }
     }
+    
 
     const handleEdit = async (id, name, email, website, phone, address) =>{
         setEditId(id);
