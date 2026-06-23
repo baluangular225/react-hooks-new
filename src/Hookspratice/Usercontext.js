@@ -4,6 +4,8 @@ export const Usercontext = createContext()
 
 export const UsercontextProvider6 = ({ children }) =>{
 
+  const URL = 'https://jsonplaceholder.typicode.com/users';
+
   const [userData, setUserData] = useState([]);
 
   const fetchApi = async (apiUrl) =>{
@@ -17,7 +19,7 @@ export const UsercontextProvider6 = ({ children }) =>{
   }
 
   useEffect(()=>{
-    fetchApi('https://jsonplaceholder.typicode.com/users');
+    fetchApi(URL);
   },[])
 
     return (
