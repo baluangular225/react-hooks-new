@@ -81,6 +81,8 @@ import Usestatepratice8 from './Hookspratice/Usestatepratice8';
 import Usestatepratice88 from './Hookspratice/Usestatepratice88';
 import Usestatepratice9 from './Hookspratice/Usestatepratice9';
 import Usestatepratice99 from './Hookspratice/Usestatepratice99';
+import Usestatepratice10 from './Hookspratice/Usestatepratice10';
+import Usestatepratice66 from './Hookspratice/Usestatepratice66';
 
 
 const App = () => {
@@ -151,6 +153,8 @@ const App = () => {
         <Route path='usestatepratice8' element={<Usestatepratice8/>} />
         <Route path='usestatepratice9' element={<Usestatepratice9/>} />
         <Route path='usestatepratice9/:userId' element={<Usestatepratice99/>} />
+        <Route path="usestatepratice10" element={<Usestatepratice10 />} />
+        <Route path="usestatepratice10/:userId" element={<Usestatepratice66/>} />
         <Route path='Usestatepratice8/:userId' element={<Usestatepratice88/>} />
         <Route path="useeffect11" element={<Useeffect11/>} />
         <Route path='useeffect12' element={<Useeffect12/>} />
